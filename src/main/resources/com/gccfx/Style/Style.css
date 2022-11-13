@@ -1,0 +1,62 @@
+/* CSS */
+.button-71 {
+    -fx-background-color: #0ed000;
+    -fx-border: 1px;
+    -fx-border-color: #0ed000;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 10 20 10 20;
+}
+
+.label {
+
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 0.035rem;
+    -fx-color: #002eff;
+    -fx-border-width: 0.0625rem;
+
+}
+.css-input {
+    -fx-font-size: 14px;
+    -fx-color: #002fff;
+    -fx-border-radius: 21px;
+}
+.btn{
+    -fx-background-color: rgba(0, 47, 255, 0.84);
+    -fx-border-radius: 21px;
+    -fx-background-radius: 21px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-text-align:    center;
+}
+.next{
+    -fx-background-color: rgba(0, 128, 0, 0.81);
+}
+#nbCat{
+
+    -fx-background-color: #0000ff;
+/*    text color blue*/
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+/*    border*/
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+/*    text white */
+    -fx-text-fill: #ffffff;
+}
+.border{
+    -fx-border-color: #0000ff;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 50px;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+}

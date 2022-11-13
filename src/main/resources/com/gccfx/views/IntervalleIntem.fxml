@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" spacing="20.0" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gccfx.Controllers.IntervalleItem">
+   <children>
+      <Label fx:id="labaelParam" stylesheets="@../Style/Style.css" text="Parametre">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="BornInf" promptText="Borne Inf" styleClass="css-input" stylesheets="@../Style/Style.css" />
+      <TextField fx:id="BornSup" promptText="Borne Sup" styleClass="css-input" stylesheets="@../Style/Style.css" />
+      <Button fx:id="btn" mnemonicParsing="false" onAction="#AddParam" prefHeight="26.0" prefWidth="60.0" styleClass="btn" stylesheets="@../Style/Style.css" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="btnAddParam" fitHeight="28.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-plus-math-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</HBox>
