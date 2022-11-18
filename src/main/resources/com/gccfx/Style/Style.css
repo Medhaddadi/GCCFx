@@ -34,6 +34,15 @@
     -fx-font-weight: bold;
     -fx-padding: 10 20 10 20;
     -fx-text-align:    center;
+}.btn2{
+    -fx-background-color: rgba(0, 47, 255, 0.84);
+    -fx-border-radius: 21px;
+    -fx-background-radius: 21px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-align:    center;
+
+    -fx-text-fill: #ffffff;
 }
 .next{
     -fx-background-color: rgba(0, 128, 0, 0.81);

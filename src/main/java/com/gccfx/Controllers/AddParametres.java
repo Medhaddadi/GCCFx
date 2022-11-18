@@ -18,7 +18,6 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.Parameter;
 import java.net.URL;
 import java.util.*;
 
@@ -36,8 +35,6 @@ public class AddParametres implements Initializable {
 
     private static int nbParametreAdded=0;
 
-
-    private Categorie categorie = AddCategorieController.categories.get(AddCategorieController.categories.size()-1);
     private int param=AddCategorieController.nbParametre;
 
     @FXML
@@ -59,11 +56,7 @@ public class AddParametres implements Initializable {
 
             }else {
             //get the parametres from the view
-            AddParametreItem addParametreItem = new AddParametreItem();
-            LinkedList<Parametre> parametres = AddParametreItem.getParametres();
             //add parametres to categorie
-            categorie.setParametres(parametres);
-            System.out.println(categorie.toString() );
             //open the AddCategorie view
             Stage s = switchToCategorie(event);
             s.show();

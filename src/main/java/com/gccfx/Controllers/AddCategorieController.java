@@ -35,8 +35,6 @@ public class AddCategorieController implements Initializable {
 
     protected static Integer nbParametre=0;
 
-    public AddCategorieController() throws IOException {
-    }
 
     @FXML
     void AddCat(ActionEvent event) throws FieledIsEmptyException {
@@ -48,15 +46,11 @@ public class AddCategorieController implements Initializable {
                 throw new FieledIsEmptyException("Le chap est vide");
             }
             Categorie categorie = new Categorie(name, nbParametre);
-            categorie.setName(name);
-            categorie.setNbParam(nbParametre);
             categories.add(categorie);
             catName.setText("");
             //open the AddParametres view
            Stage s= switchToParametres(event);
            s.show();
-
-           AddParametres addParametres = new AddParametres();
            //add categorie to database
         } catch (Exception e) {
             e.printStackTrace();

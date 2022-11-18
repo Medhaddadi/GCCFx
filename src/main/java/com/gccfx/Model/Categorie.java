@@ -1,13 +1,12 @@
 package com.gccfx.Model;
 
-import com.gccfx.Model.*;
 import java.util.LinkedList;
 
 public class Categorie {
     private String nomCategorie;
     private int nbrParametres;
     LinkedList<Parametre> parametres;
-
+    private double moyenneparametre;
     private static int compteurCat = 0;
 
     //constructor
@@ -98,5 +97,15 @@ public class Categorie {
 
     public void setNbParam(int nbParam) {
         this.nbrParametres = nbParam;
+    }
+    public void CalculMoyenne() {
+        double somme = 0;
+        for (int i = 0; i < parametres.size(); i++) {
+            somme += parametres.get(i).getValeur() * parametres.get(i).getFacteur();
+        }
+       moyenneparametre = somme / parametres.size();
+    }
+    public double getMoyenne() {
+        return moyenneparametre;
     }
 }

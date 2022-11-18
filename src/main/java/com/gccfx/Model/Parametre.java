@@ -3,7 +3,7 @@ package com.gccfx.Model;
 public class Parametre {
     private String nomParametre;
     private int facteur;
-    private int valeur;
+    private double valeur;
 
     private static int compteurPar = 0;
 
@@ -26,6 +26,10 @@ public class Parametre {
         compteurPar++;
     }
 
+    public Parametre() {
+
+    }
+
     public String getNomParametre() {
         return nomParametre;
     }
@@ -42,11 +46,11 @@ public class Parametre {
         this.facteur = facteur;
     }
 
-    public int getValeur() {
+    public double getValeur() {
         return valeur;
     }
 
-    public void setValeur(int valeur) {
+    public void setValeur(double valeur) {
         this.valeur = valeur;
     }
 
@@ -59,4 +63,10 @@ public class Parametre {
     public String getName() {
         return nomParametre;
     }
+
+    public void setName(String text) {
+        this.nomParametre=text;
+    }
+
+
 }

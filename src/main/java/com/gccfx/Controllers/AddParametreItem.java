@@ -10,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
@@ -25,7 +24,6 @@ public class AddParametreItem implements Initializable {
     @FXML
     private Label labaelParam;
 
-    private static LinkedList<Parametre> parametres = new LinkedList<Parametre>();
 
     @FXML
     private TextField nomParam;
@@ -35,9 +33,6 @@ public class AddParametreItem implements Initializable {
         this.labaelParam.setText(label);
     }
     //get parametres
-    public static LinkedList<Parametre> getParametres() {
-        return parametres;
-    }
     @FXML
     void AddParam(ActionEvent event) throws FieledIsEmptyException {
         String nom = nomParam.getText();
@@ -46,7 +41,7 @@ public class AddParametreItem implements Initializable {
         }
         int fact = facteur.getValue();
         Parametre parametre = new Parametre(nom,fact);
-        parametres.add(parametre);
+        AddCategorieController.categories.getLast().addParametre(parametre);
         btn.setDisable(true);
         Label nbLabel = AddParametres.nbrCat;
         //increment the number of parametres added
