@@ -1,14 +1,29 @@
 package com.gccfx.Model;
 
+import javafx.util.Pair;
+
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Categorie {
     private String nomCategorie;
     private int nbrParametres;
     LinkedList<Parametre> parametres;
     private double moyenneparametre;
+
+    LinkedList<Pair<Interval,String>> Intervales=new LinkedList<>();
+
     private static int compteurCat = 0;
 
+    public void setIntervales(LinkedList<Pair<Interval,String>> intervales) {
+        Intervales = intervales;
+    }
+    public void getInterval(){
+        for (Pair<Interval,String> interval : Intervales) {
+            System.out.println(interval.getKey().getBorneInf()+" "+interval.getKey().getBorneSup()+" "+interval.getValue());
+        }
+    }
     //constructor
     public Categorie(String nomCategorie, int nbrParametres) {
         this.nomCategorie = nomCategorie;
@@ -71,8 +86,7 @@ public class Categorie {
     //toString
     @Override
     public String toString() {
-        return "Categorie [nomCategorie=" + nomCategorie + ", nbrParametres=" + nbrParametres + ", parametres=" + parametres
-                + "]";
+        return "Categorie [nomCategorie=" + nomCategorie +",moynneParametre="+moyenneparametre+", nbrParametres=" + nbrParametres + ", parametres=" + parametres + "]";
     }
     //get  name
     public String getName() {
@@ -107,5 +121,9 @@ public class Categorie {
     }
     public double getMoyenne() {
         return moyenneparametre;
+    }
+
+    public String nameProperty() {
+        return getName();
     }
 }

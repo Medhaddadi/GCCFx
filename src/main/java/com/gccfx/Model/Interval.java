@@ -52,4 +52,12 @@ public class Interval {
         return borneSup;
 
     }
+
+    public String getMin() {
+        return String.valueOf(borneInf);
+    }
+
+    public String getMax() {
+        return String.valueOf(borneSup);
+    }
 }

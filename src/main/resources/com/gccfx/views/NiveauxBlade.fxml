@@ -4,7 +4,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -75,16 +74,6 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="601.0" spacing="50.0">
-                     <children>
-                        <Label stylesheets="@../Style/Style.css" text="Nombre des intervalle ">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Spinner fx:id="nbIntervalle" styleClass="css-input" stylesheets="@../Style/Style.css" />
                      </children>
                   </HBox>
                </children>

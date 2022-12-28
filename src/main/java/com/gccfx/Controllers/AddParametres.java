@@ -75,7 +75,6 @@ public class AddParametres implements Initializable {
         int colums = 0;
         int row = 1;
         try {
-             System.out.println(param);
             for (int i = 0; i < param; i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 HBox hbox = fxmlLoader.load((Main.class.getResource("views/parametreItem.fxml")));
@@ -99,13 +98,7 @@ public class AddParametres implements Initializable {
     }
 
     //switch to the AddCategorie view
-    public void switchToParametres(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load((Main.class.getResource("views/AddParametres.fxml")));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Ajouter des Parametres");
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
+
     public Stage switchToCategorie(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load((Main.class.getResource("views/AddCategorie.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

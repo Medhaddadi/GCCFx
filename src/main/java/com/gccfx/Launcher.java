@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.lang.module.Configuration;
 import java.util.Objects;
 
-public class Main extends Application {
+    public class Launcher  extends Application {
 
 
     @Override

@@ -4,12 +4,15 @@ import com.gccfx.Main;
 import com.gccfx.Model.Categorie;
 import com.gccfx.Model.Parametre;
 
+import com.gccfx.dataBase.data;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -64,9 +67,9 @@ public class CategorieStage  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LinkedList<Parametre>  parametres = AddCategorieController.categories.get(StageController.indexCat).getParametres();
+        LinkedList<Parametre>  parametres = data.categories.get(StageController.indexCat).getParametres();
         //New label and textfield for parametres
-        nameCat.setText(AddCategorieController.categories.get(indexCat).getName());
+        nameCat.setText(data.categories.get(indexCat).getName());
         //set id for each nameCat
         nameCat.setId("nameCat");
         params.setId("params");
@@ -74,12 +77,24 @@ public class CategorieStage  implements Initializable {
         int row = 1;
         for (Parametre parametre : parametres) {
             Label label = new Label(parametre.getName());
+            //label set with 150
+
+            //set label bold
+            label.setStyle("-fx-font-weight: bold");
+            label.setStyle("-fx-font-weight: bold");
             // set id for label
             label.setId("nameParam");
             TextField textField = new TextField();
-            // set id for textfield
+            // set with  textfield
+
             textField.setId("valueParam");
-            VBox vBox = new VBox();
+            HBox vBox = new HBox();
+            //element center
+            vBox.setAlignment(Pos.CENTER);
+            //border to vBox black
+
+            //set spacing between label and textfield
+            vBox.setSpacing(20);
             vBox.getChildren().addAll(label, textField);
             if (col ==1) {
                 col = 0;

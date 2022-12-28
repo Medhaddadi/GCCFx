@@ -47,4 +47,11 @@ public class Niveau {
     public String toString() {
         return "Niveau [niveau1=" + niveau1 + ", niveau2=" + niveau2 + ", niveau3=" + niveau3 + "]";
     }
+
+    public Double getNiveau(int i) {
+        if (i==1) return niveau1;
+        if (i==2) return niveau2;
+        if (i==3) return niveau3;
+        return null;
+    }
 }

@@ -3,6 +3,7 @@ package com.gccfx.Controllers;
 
 import com.gccfx.Error.FieledIsEmptyException;
 import com.gccfx.Model.Parametre;
+import com.gccfx.dataBase.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,7 +42,7 @@ public class AddParametreItem implements Initializable {
         }
         int fact = facteur.getValue();
         Parametre parametre = new Parametre(nom,fact);
-        AddCategorieController.categories.getLast().addParametre(parametre);
+        data.categories.getLast().addParametre(parametre);
         btn.setDisable(true);
         Label nbLabel = AddParametres.nbrCat;
         //increment the number of parametres added

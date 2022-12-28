@@ -3,7 +3,7 @@ package com.gccfx.Error;
 import javafx.scene.control.Alert;
 
 public class IsDegetalException extends Exception {
-    public IsDegetalException(String message,int i) {
+    public IsDegetalException(String message,double i) {
         super(message);
         //alert message give number between i and j
         Alert alert = new Alert(Alert.AlertType.ERROR);

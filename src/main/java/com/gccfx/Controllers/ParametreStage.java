@@ -1,6 +1,7 @@
 package com.gccfx.Controllers;
 
 import com.gccfx.Model.Parametre;
+import com.gccfx.dataBase.data;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -29,7 +30,7 @@ public class ParametreStage implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Parametre parametre = AddCategorieController.categories.get(StageController.indexCat).getParametres().get(indexParam);
+        Parametre parametre = data.categories.get(StageController.indexCat).getParametres().get(indexParam);
         nameParam.setText(parametre.getName());
     }
 

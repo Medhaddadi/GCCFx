@@ -4,6 +4,7 @@ import com.gccfx.Error.*;
 import com.gccfx.Main;
 import com.gccfx.Model.Categorie;
 
+import com.gccfx.dataBase.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class AddCategorieController implements Initializable {
 
-    public static LinkedList<Categorie> categories=new LinkedList<>();
+
 
     @FXML
     private TextField catName;
@@ -32,7 +33,8 @@ public class AddCategorieController implements Initializable {
     private Spinner<Integer> nbParam;
     @FXML
     private Label nbrCat;
-
+    @FXML
+    private Spinner<Integer> nbIntervalle;
     protected static Integer nbParametre=0;
 
 
@@ -43,10 +45,10 @@ public class AddCategorieController implements Initializable {
              nbParametre = this.nbParam.getValue();
             //check if the field is empty
             if (name.isEmpty()) {
-                throw new FieledIsEmptyException("Le chap est vide");
+                throw new FieledIsEmptyException("Le champ est vide");
             }
             Categorie categorie = new Categorie(name, nbParametre);
-            categories.add(categorie);
+            data.categories.add(categorie);
             catName.setText("");
             //open the AddParametres view
            Stage s= switchToParametres(event);
@@ -60,18 +62,25 @@ public class AddCategorieController implements Initializable {
 
     @FXML
     void Next(ActionEvent event) throws IOException {
-        //switch to niveau view
-
-        Stage s = AddCategorieController.switchToNext(event,"views/NiveauxBlade.fxml" ,"Niveau");
-        s.show();
+        //add confirmation alert if the user want to add another categorie or not
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Confirmation");
+        alert.setContentText("Voulez aller to next page Add intervales? ");
+        alert.showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            data.nbIntervalles=nbIntervalle.getValue();
+            Stage s = AddCategorieController.switchToNext(event,"views/IntervallesController.fxml" ,"Interval");
+            s.show();
+        }
     }
     //return nb de parametres
-    public int getNbParam() {
-        return nbParam.getValue();
-    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        nbrCat.setText( Integer.toString(categories.size())) ;
+        //set the value of the spinner
+        nbIntervalle.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 6, 1));
+        nbrCat.setText( Integer.toString(data.categories.size())) ;
         //initialize snipper from 1 to 15
         nbParam.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 15, 1));
     }

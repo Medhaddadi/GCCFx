@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="800.0" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gccfx.Controllers.FinalStageController">
+   <children>
+      <HBox layoutX="19.0" layoutY="40.0" prefHeight="135.0" prefWidth="765.0" spacing="30.0" styleClass="border">
+         <children>
+            <VBox prefHeight="131.0" prefWidth="266.0" styleClass="blackBorder">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="230.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="182.0" text="premier pourcentage">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="P1" text="Label" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="230.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="182.0" text="Deusieme pourcentage">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="P2" text="Label" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="230.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="182.0" text="Troisieme pourcentage">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="P3" text="Label" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="131.0" prefWidth="488.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="134.0" fitWidth="444.0" layoutX="24.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Figure1videnninterface2.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="Mv" layoutX="84.0" layoutY="86.0" prefHeight="34.0" prefWidth="77.0" />
+                        <TextField fx:id="Ev" layoutX="328.0" layoutY="83.0" prefHeight="34.0" prefWidth="77.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="Pv" layoutX="208.0" layoutY="81.0" prefHeight="34.0" prefWidth="77.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="145.0" layoutY="199.0" prefHeight="100.0" prefWidth="514.0" spacing="40.0">
+         <children>
+            <Label text="L'intervention vers :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="vers" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ListView fx:id="operation" layoutX="28.0" layoutY="315.0" prefHeight="200.0" prefWidth="357.0" />
+      <ListView fx:id="resultat" layoutX="428.0" layoutY="314.0" prefHeight="200.0" prefWidth="353.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="525.0" prefHeight="63.0" prefWidth="755.0" spacing="30.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="236.0" text="Feedback apprenant a l'action :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="pos" mnemonicParsing="false" onAction="#positive" prefHeight="34.0" prefWidth="127.0" style="-fx-background-color: green;" text="Positive" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="neg" mnemonicParsing="false" onAction="#negative" prefHeight="34.0" prefWidth="127.0" style="-fx-background-color: red;" text="Negative" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="action" mnemonicParsing="false" onAction="#Action" prefHeight="34.0" prefWidth="260.0" styleClass="blackBorder" text="Action">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

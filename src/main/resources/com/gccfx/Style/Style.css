@@ -69,3 +69,14 @@
     -fx-border-width: 2px;
     -fx-border-style: solid;
 }
+.blackBorder{
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+}
+vbox{
+
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+}
